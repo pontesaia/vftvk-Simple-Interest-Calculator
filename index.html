@@ -2,35 +2,41 @@
 
 <head>
     <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="card">
+    <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
-
-        <div>
-
-
         <table>
             <tbody>
             <tr>
                 <td class="col1">Amount</td>
-                <td><input type="number" id="principal" name="principal" class="principal"></td>
+                <td><input type="number" min="1" id="principal" name="principal" class="principal" onchange="alerterror()"></td>
             </tr>
             <tr>
                 <td class="col1">Interest Rate</td>
-                <td><input type="range" step=".5" min="0" max="100" id="rate" name="rate" class="rate" oninput="this.nextElementSibling.value = this.value +'%'">
+                <td><input type="range" step=".25" min="1" max="20" id="rate" name="rate" class="rate" oninput="this.nextElementSibling.value = this.value +'%'">
                    
-                <output name="range" for="rate"></output></td>
+                <output name="range" for="rate">10.25 %</output></td>
             </tr>
             <tr>
                 <td class="col1">No. of Years</td>
-                <td><input type="number" id="years" name="years" class="years"></td>
+                <td>
+                    <select id="years" name="years" class="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
             </tr>
-           
             <tr>
                 <td class="col1"><button type="submit" onclick="compute()">Compute Interest</button></td>
             </tr>
@@ -38,15 +44,12 @@
                 <td colspan="2"><span id="result"></span></td>
             </tr>
             </tbody>
-        
-        </table>    
-       
+        </table> 
 
-        </div>
+        <footer>&#9400; Everyone Can Get Rich</footer>
 
-
-        <p>&#9400; Everyone Can Get Rich</p>
     </div>
+ 
 
 </body>
 
