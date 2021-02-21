@@ -13,7 +13,7 @@ function compute() {
     document.getElementById('result').innerHTML = 
         "<p>If you deposit <span class='hilite'>" + principal + "</span><br/>"
         + "at an interest rate of <span class='hilite'>" + rate + "% </span><br/>"
-        + "You will recieve an amount of <span class='hilite'>" + interest + "</span><br/>"
+        + "You will receive an amount of <span class='hilite'>" + interest + "</span><br/>"
         + "in the year <span class='hilite'>" + futureYear + "</span></p>"; 
 
 
