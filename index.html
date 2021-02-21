@@ -1,16 +1,55 @@
 <html>
-    <head>
+
+<head>
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+    <div class="card">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+
+        <table>
+            <tbody>
+            <tr>
+                <td class="col1">Amount</td>
+                <td><input type="number" id="principal" name="principal" class="principal"></td>
+            </tr>
+            <tr>
+                <td class="col1">Interest Rate</td>
+                <td><input type="range" step=".5" min="0" max="10" id="rate" name="rate" class="rate" oninput="this.nextElementSibling.value = this.value +'%'">
+                    <output></output>
+
+                <output name="range" for="rate"></output></td>
+            </tr>
+            <tr>
+                <td class="col1">No. of Years</td>
+                <td><input type="number" id="years" name="years" class="years"></td>
+            </tr>
+            <tr>
+                <td class="col1">Interest :</td>
+                <td><span id="result"></span></td>
+            </tr>
+            <tr>
+                <td class="col1"><button onclick="compute()">Compute Interest</button></td>
+            </tr>
+            </tbody>
+        
+        </table>    
+       
+
+        </div>
+
+
+
+        <p>&#9400; Everyone Can Get Rich</p>
+    </div>
+
+</body>
+
 </html>
