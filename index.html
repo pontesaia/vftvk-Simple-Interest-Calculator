@@ -22,21 +22,20 @@
             </tr>
             <tr>
                 <td class="col1">Interest Rate</td>
-                <td><input type="range" step=".5" min="0" max="10" id="rate" name="rate" class="rate" oninput="this.nextElementSibling.value = this.value +'%'">
-                    <output></output>
-
+                <td><input type="range" step=".5" min="0" max="100" id="rate" name="rate" class="rate" oninput="this.nextElementSibling.value = this.value +'%'">
+                   
                 <output name="range" for="rate"></output></td>
             </tr>
             <tr>
                 <td class="col1">No. of Years</td>
                 <td><input type="number" id="years" name="years" class="years"></td>
             </tr>
+           
             <tr>
-                <td class="col1">Interest :</td>
-                <td><span id="result"></span></td>
+                <td class="col1"><button type="submit" onclick="compute()">Compute Interest</button></td>
             </tr>
             <tr>
-                <td class="col1"><button onclick="compute()">Compute Interest</button></td>
+                <td colspan="2"><span id="result"></span></td>
             </tr>
             </tbody>
         
@@ -44,7 +43,6 @@
        
 
         </div>
-
 
 
         <p>&#9400; Everyone Can Get Rich</p>
