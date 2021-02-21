@@ -2,6 +2,7 @@
 
 
 function compute() {
+
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
     var d = new Date();
@@ -15,18 +16,13 @@ function compute() {
         + "at an interest rate of <span class='hilite'>" + rate + "% </span><br/>"
         + "You will receive an amount of <span class='hilite'>" + interest + "</span><br/>"
         + "in the year <span class='hilite'>" + futureYear + "</span></p>"; 
-
-
+    
+    if (principal < 1 || principal.isEmpty()) {
+        alert("Enter in a positive number in the amount field!");
+        document.getElementById("principal").focus();
+        document.getElementById('result').innerHTML = "";
+    } 
 }
 
-function alerterror(){
-    var principal = document.getElementById("principal").value;
- 
-    if (principal < 1 ){
-       alert("Enter in a positive number!");
-        document.getElementById("principal").focus(); 
 
-    }
-    return
 
-}
